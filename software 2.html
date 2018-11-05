@@ -10,7 +10,8 @@
     Projeto Henrique
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
+  <!--     Fonts and icons     -->  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -129,24 +130,42 @@
                                   
             
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="card card-chart">
                 <div class="card-header ">
+                        <div class="row">
+                        <div class="col-md-6">
                   <div class="ct-chart" id="postos"></div>
+                        </div>
+                  <div class="col-md-6">    
+                  <div class="ct-chart" id="postos2"></div>
                 </div>
                 <div class="card-body">
                   <h4 class="card-title">Postos</h4>
                 </div>
+                        </div>
                 <div class="card-footer">
                   <div class="stats">
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="card card-chart">
                 <div class="card-header "></div>
-                  <div class="ct-chart"  id="bares"></div>
+                   <div class="row">
+                  <div class="col-md-6">
+
+                  <div class="ct-chart" id="bares"></div>
+                        </div>
+               
+                <div class="col-md-6">
+                        
+
+                  <div class="ct-chart" id="bares2"></div>
+                       
+                </div>
+                </div>
                 
                 <div class="card-body" >
                   <h4 class="card-title">Bares</h4>
@@ -157,10 +176,20 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="card card-chart">
                 <div class="card-header ">
-                  <div class="ct-chart" id="restaurantes"></div>
+                        
+                                <div class="row">
+                                        <div class="col-md-6">
+                          <div class="ct-chart" id="restaurantes"></div>
+                                        </div>
+                        <div class="col-md-6">
+                                        
+                          <div class="ct-chart" id="restaurantes2"></div>
+                        </div>
+                                </div>
+                        
                 </div>
                 <div class="card-body">
                   <h4 class="card-title">Restaurantes</h4>
@@ -171,10 +200,21 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            </div>
+            <div class="col-md-12">
               <div class="card card-chart">
                 <div class="card-header">
-                  <div class="ct-chart" id="lojas"></div>
+                                <div class="row">
+                                        <div class="col-md-6">
+
+                          <div class="ct-chart" id="lojas"></div>
+                                        </div>
+                                                <div class="col-md-6">
+                                <div class="row">
+                                </div>
+                          <div class="ct-chart" id="lojas2"></div>
+                                </div>
+                        </div>
                 </div>
                 <div class="card-body">
                   <h4 class="card-title">Lojas</h4>
@@ -223,11 +263,19 @@
     google.charts.load('current', {"callback" : criaGrafico,'packages':['corechart']});
     function criaGrafico() {
       locais={
-          postos:{NULL:[],AC:[15,16],AL:[15,16],AP:[25,333],AM:[15,16],BA:[15,16],CE:[15,16],DF:[15,16],ES:[15,16],GO:[15,16],MA:[15,16],MT:[15,16],MS:[15,16],MG:[15,16],PA:[15,16],PB:[15,16],PR:[15,16],PE:[15,16],PI:[15,16],RJ:[15,16],RN:[15,16],RS:[15,16],RN:[15,16],RO:[15,16],SC:[15,16],SP:[15,16],SE:[15,16],TO:[15,16]},
-          restaurante:{NULL:[],AC:[556,3325],AL:[],AP:[],AM:[],BA:[10,1],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-          bares:{NULL:[],AC:[1236,125.23],AL:[],AP:[],AM:[],BA:[8,9],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-          lojas:{NULL:[],AC:[3215,9875],AL:[],AP:[],AM:[],BA:[3,3],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-      }
+          postos:{NULL:[],AC:[15,16,0],AL:[15,16],AP:[25,333],AM:[15,16],BA:[15,16],CE:[15,16],DF:[15,16],ES:[15,16],GO:[15,16],MA:[15,16],MT:[15,16],MS:[15,16],MG:[15,16],PA:[15,16],PB:[15,16],PR:[15,16],PE:[15,16],PI:[15,16],RJ:[15,16],RN:[15,16],RS:[15,16],RN:[15,16],RO:[15,16],SC:[15,16],SP:[15,16],SE:[15,16],TO:[15,16]},
+          restaurante:{NULL:[],AC:[556,3325,0],AL:[],AP:[],AM:[],BA:[10,1],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+          bares:{NULL:[],AC:[1236,125.23,0],AL:[],AP:[],AM:[],BA:[8,9],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+          lojas:{NULL:[],AC:[3215,9875,3000],AL:[],AP:[],AM:[],BA:[3,3],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+
+
+//BD do ColumnChart
+          softwareHouse:{NULL:[],AC:[556,3325,0],AL:[],AP:[],AM:[],BA:[10,1],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+          população:{NULL:[],AC:[1236,125.23,0],AL:[],AP:[],AM:[],BA:[8,9],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+          outros:{NULL:[],AC:[3215,9875,3000],AL:[],AP:[],AM:[],BA:[3,3],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+          
+
+        }
       local = $("#dropdown").val()
       dataPosto =returnData("postos",locais,local)
       dataBares =returnData("bares",locais,local)
@@ -236,7 +284,7 @@
       var options = {
                   'width':"100%",
                   'height':"100%",
-                  // Tamanho do Buraco da pizza 
+// Tamanho do Buraco da pizza 
                   pieHole: 0.2,
                   animation:{
                     duration: 5000,
@@ -247,25 +295,51 @@
                   legend:{position: 'bottom', textStyle: { fontSize: 10}},
                   backgroundColor: "transparent",
                   // Cores para o grafico
-                  colors:['#FE2E2E','#0040FF']
+                  colors:['blue','yellow','black']
                 };
-      var chartPostos = new google.visualization.PieChart(document.getElementById("postos"));
-      var chartBares = new google.visualization.PieChart(document.getElementById("bares"));
-      var chartRestaurantes = new google.visualization.PieChart(document.getElementById("restaurantes"));
-      var chartLojas = new google.visualization.PieChart(document.getElementById("lojas"));
+      
+// queria que essa tabela usasse outra BD  que a do PieChart
+       var chartPostos = new google.visualization.ColumnChart(document.getElementById('postos'));
+       var chartBares = new google.visualization.ColumnChart(document.getElementById('bares'));
+       var chartRestaurantes = new google.visualization.ColumnChart(document.getElementById('restaurantes'));
+       var chartLojas = new google.visualization.ColumnChart(document.getElementById('lojas'));
+
+
+
+       var chartPostos2 = new google.visualization.PieChart(document.getElementById('postos2'));
+       var chartBares2 = new google.visualization.PieChart(document.getElementById('bares2'));
+       var chartRestaurantes2 = new google.visualization.PieChart(document.getElementById('restaurantes2'));
+       var chartLojas2 = new google.visualization.PieChart(document.getElementById('lojas2'));
+
+
+    
       chartPostos.draw(dataPosto, options)
-      chartBares.draw(dataBares, options)
+      chartBares.draw(dataBares, options) 
       chartRestaurantes.draw(dataRestaurantes, options)
       chartLojas.draw(dataLojas, options)
 
+      chartPostos2.draw(dataPosto, options)
+      chartBares2.draw(dataBares, options) 
+      chartRestaurantes2.draw(dataRestaurantes, options)
+      chartLojas2.draw(dataLojas, options)
     }
   function returnData(estabelecimento,locais,local){
     var data = new google.visualization.DataTable();
       data.addColumn('string', 'Cliente');
       data.addColumn('number', 'Qtd');
+  
+
       data.addRows([
-          ['Cliente', locais[estabelecimento][local][0]],
+//Nomes do PieChart
+          ['Clientes', locais[estabelecimento][local][0]],
           ['Não Cliente', locais[estabelecimento][local][1]],
+
+//Nomes do ColumnChart
+          ['Não ', locais[estabelecimento][local][3]]
+          ['Não ', locais[estabelecimento][local][4]]
+          ['Não ', locais[estabelecimento][local][5]]
+
+
     ]);
   return data
   }
