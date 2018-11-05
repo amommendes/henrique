@@ -270,9 +270,9 @@
 
 
 //BD do ColumnChart
-          softwareHouse:{NULL:[],AC:[556,3325,0],AL:[],AP:[],AM:[],BA:[10,1],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-          população:{NULL:[],AC:[1236,125.23,0],AL:[],AP:[],AM:[],BA:[8,9],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-          outros:{NULL:[],AC:[3215,9875,3000],AL:[],AP:[],AM:[],BA:[3,3],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+         // softwareHouse:{NULL:[],AC:[556,3325,0],AL:[],AP:[],AM:[],BA:[10,1],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+         // população:{NULL:[],AC:[1236,125.23,0],AL:[],AP:[],AM:[],BA:[8,9],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
+         // outros:{NULL:[],AC:[3215,9875,3000],AL:[],AP:[],AM:[],BA:[3,3],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
           
 
         }
@@ -284,7 +284,7 @@
       var options = {
                   'width':"100%",
                   'height':"100%",
-// Tamanho do Buraco da pizza 
+                  // Tamanho do Buraco da pizza 
                   pieHole: 0.2,
                   animation:{
                     duration: 5000,
@@ -330,19 +330,53 @@
   
 
       data.addRows([
-//Nomes do PieChart
+ //Nomes do PieChart
           ['Clientes', locais[estabelecimento][local][0]],
           ['Não Cliente', locais[estabelecimento][local][1]],
-
+          
 //Nomes do ColumnChart
-          ['Não ', locais[estabelecimento][local][3]]
-          ['Não ', locais[estabelecimento][local][4]]
-          ['Não ', locais[estabelecimento][local][5]]
+         // ['Não ', locais[estabelecimento][local][3]]
+         // ['Não ', locais[estabelecimento][local][4]]
+        // ['Não ', locais[estabelecimento][local][5]]
 
 
     ]);
   return data
   }
  </script>
+
+   data.addRows([
+      [{v: [8, 0, 0], f: '8 am'}, 1],
+      [{v: [9, 0, 0], f: '9 am'}, 2],
+      [{v: [10, 0, 0], f:'10 am'}, 3],
+      [{v: [11, 0, 0], f: '11 am'}, 4],
+      [{v: [12, 0, 0], f: '12 pm'}, 5],
+      [{v: [13, 0, 0], f: '1 pm'}, 6],
+      [{v: [14, 0, 0], f: '2 pm'}, 7],
+      [{v: [15, 0, 0], f: '3 pm'}, 8],
+      [{v: [16, 0, 0], f: '4 pm'}, 9],
+      [{v: [17, 0, 0], f: '5 pm'}, 10],
+    ]);
+
+    var options = {
+      title: 'Motivation Level Throughout the Day',
+      hAxis: {
+        title: 'Time of Day',
+        format: 'h:mm a',
+        viewWindow: {
+          min: [7, 30, 0],
+          max: [17, 30, 0]
+        }
+      },
+      vAxis: {
+        title: 'Rating (scale of 1-10)'
+      }
+    };
+
+    var chart = new google.visualization.ColumnChart(
+      document.getElementById('chart_div'));
+
+    chart.draw(data, options);
+  }
 </body>
 </html>
