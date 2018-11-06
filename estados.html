@@ -22,7 +22,7 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="14.jpg">
       <div class="logo">
         <a href="#" class="simple-text logo-normal">
           Gráfico
@@ -36,24 +36,31 @@
               <p>Home</p>
             </a>
           </li>
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./estados.html">
-              <i class="material-icons">dashboard</i>
+          <li class="nav-item   ">
+              <a class="nav-link" href="softhouse-1.html">
+                <i class="material-icons">work</i>
+                <p>Software House</p>
+              </a>
+            </li>
+          <li class="nav-item  active ">
+            <a class="nav-link" href="estados.html">
+              <i class="material-icons">location_on</i>
               <p>Estados</p>
             </a>
           </li>
-          <li class="nav-item  ">
-            <a class="nav-link" href="capitais.html">
-              <i class="material-icons">dashboard</i>
+          <li class="nav-item   ">
+            <a class="nav-link" href="./capitais.html">
+              <i class="material-icons">location_on</i>
               <p>Capitais</p>
             </a>
           </li>
           <li class="nav-item   ">
             <a class="nav-link" href="regioes.html">
-              <i class="material-icons">dashboard</i>
+              <i class="material-icons">location_on</i>
               <p>Regiões</p>
             </a>
           </li>
+          
         </ul>
       </div>
     </div>
@@ -86,7 +93,7 @@
                  <div class= "col-lg-6 col-md-4 col-sm-8">
                 <select id="dropdown">
                   <optgroup label="">
-                      <option value="NULL">Todos</option>
+                      <option value="NULL">Selecione</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
                       <option value="AP">Amapá</option>
@@ -122,7 +129,7 @@
               </div>
                             </div>
                 <div class="row">  
-                    <button class="btn"><i class="fa fa-folder"></i> Abrir Excell</button>
+                    <button class="btn"><i class="fa fa-folder"></i> Abrir Excel</button>
                     <button class="btn"><i class="fa fa-download"></i> Download</button>       
                     <button class="btn"><i class="fa fa-send"></i> Enviar por e-mail</button> 
                     <button class="btn"><i class="fa fa-feed"></i>  Feedback</button>             
@@ -265,7 +272,7 @@
     google.charts.load('current', {"callback" : criaGrafico,'packages':['corechart']});
     function criaGrafico() {
       locais={
-          postos:{NULL:[],AC:[15,16,0],AL:[15,16],AP:[25,333],AM:[15,16],BA:[15,16],CE:[15,16],DF:[15,16],ES:[15,16],GO:[15,16],MA:[15,16],MT:[15,16],MS:[15,16],MG:[15,16],PA:[15,16],PB:[15,16],PR:[15,16],PE:[15,16],PI:[15,16],RJ:[15,16],RN:[15,16],RS:[15,16],RN:[15,16],RO:[15,16],SC:[15,16],SP:[15,16],SE:[15,16],TO:[15,16]},
+          postos:{NULL:[],AC:[15,16,13],AL:[15,16,14],AP:[25,333],AM:[15,16],BA:[15,16],CE:[15,16],DF:[15,16],ES:[15,16],GO:[15,16],MA:[15,16],MT:[15,16],MS:[15,16],MG:[15,16],PA:[15,16],PB:[15,16],PR:[15,16],PE:[15,16],PI:[15,16],RJ:[15,16],RN:[15,16],RS:[15,16],RN:[15,16],RO:[15,16],SC:[15,16],SP:[15,16],SE:[15,16],TO:[15,16]},
           restaurante:{NULL:[],AC:[556,3325,0],AL:[],AP:[],AM:[],BA:[10,1],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
           bares:{NULL:[],AC:[1236,125.23,0],AL:[],AP:[],AM:[],BA:[8,9],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
           lojas:{NULL:[],AC:[3215,9875,3000],AL:[],AP:[],AM:[],BA:[3,3],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
@@ -291,7 +298,7 @@
                   legend:{position: 'bottom', textStyle: { fontSize: 10}},
                   backgroundColor: "transparent",
                   // Cores para o grafico
-                  colors:['blue','yellow','black']
+                  colors:['blue','green','black']
                 };
       
 
@@ -320,7 +327,9 @@
   function returnData(estabelecimento,locais,local){
     var data = new google.visualization.DataTable();
       data.addColumn('string', 'Cliente');
+      
       data.addColumn('number', 'Qtd');
+
   
 
       data.addRows([
