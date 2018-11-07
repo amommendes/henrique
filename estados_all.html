@@ -42,7 +42,7 @@
                 <p>Software House</p>
               </a>
                     </li>
-                    <li class="nav-item  active ">
+                    <li class="nav-item   ">
                         <a class="nav-link" href="estados.html">
               <i class="material-icons">location_on</i>
               <p>Estados</p>
@@ -60,13 +60,14 @@
               <p>Regiões</p>
             </a>
                     </li>
-                    <li class="nav-item   ">
-                        <a class="nav-link" href="estados_all.html">
-              <i class="material-icons">person_add_disabled
-                </i>
-              <p>Clientes/Não clientes</p>
-            </a>
-                    </li>
+                    <li class="nav-item active  ">
+                            <a class="nav-link" href="estados_all.html">
+                  <i class="material-icons">person_add_disabled
+                    </i>
+                  <p>Clientes/Não clientes</p>
+                </a>
+                        </li>
+
                 </ul>
             </div>
         </div>
@@ -84,7 +85,7 @@
                                         <ul class="nav nav-tabs" data-tabs="tabs">
                                             <li class="nav-item">
                                                 <a class="nav-link" href="#settings" data-toggle="tab">
-                            <i class="material-icons " >important_devices</i> Gráfico por estados
+                            <i class="material-icons " >important_devices</i> Visão geral de clientes e não cliente por Estados
                              <div class="ripple-container"></div>
                            </a>
                                             </li>
@@ -115,74 +116,21 @@
                   </button>
                     <div class="collapse navbar-collapse justify-content-end">
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-4 col-sm-8">
-                <select id="dropdown">
-                  <optgroup label="">
-                      <option value="NULL">Selecione</option>
-<option value='AC'>AC-Acre</option>
-<option value='AL'>AL- Alagoas</option>
-<option value='AP'>AP- Amapá</option>
-<option value='AM'>AM- Amazonas</option>
-<option value='BA'>BA- Bahia</option>
-<option value='CE'>CE- Ceará</option>
-<option value='DF'>DF- Distrito Federal</option>
-<option value='ES'>ES- Espírito Santo</option>
-<option value='GO'>GO- Goiás</option>
-<option value='MA'>MA- Maranhão</option>
-<option value='MT'>MT- Mato Grosso</option>
-<option value='MS'>MS- Mato Grosso do Sul</option>
-<option value='MG'>MG- Minas Gerais</option>
-<option value='PA'>PA- Pará</option>
-<option value='PB'>PB- Paraíba</option>
-<option value='PR'>PR- Paraná</option>
-<option value='PE'>PE- Pernambuco</option>
-<option value='PI'>PI- Piauí</option>
-<option value='RJ'>RJ- Rio de Janeiro</option>
-<option value='RN'>RN- Rio Grande do Norte</option>
-<option value='RS'>RS- Rio Grande do Sul</option>
-<option value='RO'>RO- Rondônia</option>
-<option value='RR'>RR- Roraima</option>
-<option value='SC'>SC- Santa Catarina</option>
-<option value='SP'>SP- São Paulo</option>
-<option value='SE'>SE- Sergipe</option>
-<option value='TO'>TO- Tocantins</option>
-<option value='AC'></option>
-
-                  </optgroup>
-                </select>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-2">
-                <button class="btn btn-info pull-top" onclick="criaGrafico()"><i class="fa fa-filter" ></i> &nbsp Filtrar</button>
-            </div>
-        </div>
+             
                     <div class="row">
                         <button class="btn"><i class="fa fa-folder"></i> Abrir Excel</button>
                         <button class="btn"><i class="fa fa-download"></i> Download</button>
                         <button class="btn"><i class="fa fa-send"></i> Enviar por e-mail</button>
                         <button class="btn"><i class="fa fa-feed"></i>  Feedback</button>
                     </div>
-        <div class="row">
-          <div class="col-sm-4">
-              <div class="card card-stats">
-                  <div class="card-header card-header-success card-header-icon">
-                    <p class="card-category">Popoulação</p>
-                    <h3 class="card-title" id="populacao"></h3>
-                  </div>
-                </div>
-          </div>
-        </div>
-                    <div class="row">
+                           <div class="row">
                         <div class="col-md-12">
                             <div class="card card-chart">
                                 <div class="card-header ">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <div class="ct-chart" id="postos"></div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="ct-chart" id="postos2"></div>
-                                        </div>
+                                        </div>                                        
                                         <div class="card-body">
                                             <h4 class="card-title">Postos</h4>
                                         </div>
@@ -197,19 +145,10 @@
                                 <div class="card card-chart">
                                     <div class="card-header "></div>
                                     <div class="row">
-                                        <div class="col-md-6">
-
+                                        <div class="col-md-12">
                                             <div class="ct-chart" id="bares"></div>
                                         </div>
-
-                                        <div class="col-md-6">
-
-
-                                            <div class="ct-chart" id="bares2"></div>
-
-                                        </div>
                                     </div>
-
                                     <div class="card-body">
                                         <h4 class="card-title">Bares</h4>
                                     </div>
@@ -222,17 +161,11 @@
                             <div class="col-md-12">
                                 <div class="card card-chart">
                                     <div class="card-header ">
-
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <div class="ct-chart" id="restaurantes"></div>
-                                            </div>
-                                            <div class="col-md-6">
-
-                                                <div class="ct-chart" id="restaurantes2"></div>
-                                            </div>
+                                            </div>                                            
                                         </div>
-
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">Restaurantes</h4>
@@ -248,15 +181,9 @@
                             <div class="card card-chart">
                                 <div class="card-header">
                                     <div class="row">
-                                        <div class="col-md-6">
-
+                                        <div class="col-md-12">
                                             <div class="ct-chart" id="lojas"></div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                            </div>
-                                            <div class="ct-chart" id="lojas2"></div>
-                                        </div>
+                                        </div>                                        
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -300,30 +227,18 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="./assets/js/material-dashboard.js" type="text/javascript"></script>
         <script>
-            $(document).ready(function() {
-              $('#dropdown').select2({ width: '100%' ,placeholder:"Selecione um Estado"});
-            });
-            
+                       
             google.charts.load('current', {"callback" : criaGrafico,'packages':['corechart']});
             function criaGrafico() {
               locais={
-                postos:{NULL:[],AC:[144,918],AL:[454,1218],AP:[83,1025],AM:[1015,1572],BA:[2023,2406],CE:[502,544],DF:[479,104],ES:[1056,2555],GO:[822,2151],MA:[3006,7444],MT:[372,1020],MS:[682,1762],MG:[679,1635],PA:[388,1202],PB:[759,1635],PR:[668,591],PE:[540,1406],PI:[1101,3624],RJ:[464,988],RS:[1712,3563],RN:[69,920],RO:[20,160],RR:[451,5352],SC:[11692,1511],SP:[122,477],SE:[257,673],TO:[257,673]}, 
-                restaurante:{NULL:[],AC:[190,241],AL:[822,895],AP:[945,1002],AM:[18,181],BA:[4231,4300],CE:[2222,2383],DF:[426,521],ES:[948,1091],GO:[2240,2532],MA:[2091,2128],MT:[7307,7421],MS:[851,997],MG:[1607,1738],PA:[1490,1612],PB:[1058,1179],PR:[2156,2243],PE:[1303,1383],PI:[1506,1612],RJ:[3514,3601],RN:[881,965],RO:[751,897],RR:[84,161],RS:[5214,5329],SC:[3427,3540],SE:[358,455],SP:[15022,15088],TO:[566,650],},
-                bares:{NULL:[],AC:[144,241],AL:[752,895],AP:[907,1002],AM:[104,181],BA:[4151,4300],CE:[2292,2383],DF:[452,521],ES:[1049,1091],GO:[2458,2532],MA:[2016,2128],MT:[7347,7421],MS:[974,997],MG:[1630,1738],PA:[1479],PB:[1612],PR:[1117,1179],PE:[2245,2243],PI:[1342,1383],RJ:[1513,1612],RN:[3468,3601],RO:[902,965],RR:[881,897],RS:[104,161],SC:[5231,5329],SE:[3457,3540],SP:[14965,15088],TO:[533,650],},                  
-                lojas:{NULL:[],AC:[184,265],AL:[862,985],AP:[999,1102],AM:[85,199],BA:[4597,4730],CE:[2567,2621],DF:[469,573],ES:[1107,1200],GO:[2779,2785],MA:[2287,2340],MT:[7985,8163],MS:[984,1097],MG:[1780,1912],PA:[1700,1774],PB:[11811297],PR:[2376,2467],PE:[1469,1521],PI:[1619,1774],RJ:[3777,3962],RN:[953,1061],RO:[888,986],RR:[35,177],RS:[5772,5861],SC:[3865,3894],SE:[350,500],SP:[16488,16597],TO:[654,715],},
-              }
-              population = {AC:'7.3279.328 milhões',AL:'3.120.922 milhões',AP:'668.689 mil',AM:'3.480.937 milhões',BA:'14.021.432 milhões',CE:'8.448.055 milhões',DF:'2.562.963 milhões',ES:'3.512.672 milhões',GO:'6.004.045 milhões',
-              MA:'6.569.683 milhões',MT:'3.033.991 milhões',MS:'2.449.341 milhões',MG:'19.595.309 milhões',PA:'7.588.078 milhões',PB:'3.766.834 milhões',PR:'10.439.601 milhões',PE:'8.796.032 milhões', PI:'3.119.015 milhões',RJ:'15.993.583 milhões',
-              RN:'3168.133 milhões',RS:'10.695.532 milhões',RO:'1.560.501 milhões',RR:'451.227 mil',SC:'6.249.682 milhões',SP:'41.252.160 milhões',SE:'2.068.031 milhões',TO:'1.383.453 milhões'}
-
-
-
-              local = $("#dropdown").val()
-              $("#populacao").text(population[local])
-              dataPosto =returnData("postos",locais,local)
-              dataBares =returnData("bares",locais,local)
-              dataLojas =returnData("lojas",locais,local)
-              dataRestaurantes =returnData("restaurante",locais,local)
+                  postos: 
+                          [['AC',93,264],['AL',244,918],['AP',377,1025],['AM',79,204],['BA',2013,4323],
+                        ['CE',1104,2406],['DF',626,544],['ES',479,1114],['GO',1056,2555],['MA',822,2151],['MT',3006,7444],
+                        ['MS',372,1020],['MG',682,1761],['PA',679,1635],['PB',388,1202],['PR',759,2266],['PE',668,1406],
+                        ['PI',540,1635],['RJ',1585,3624],['RN',464,988],['RS',451,920],['RO',69,184],['RR',2742,5352],
+                    ['SC',1712,3563],['SP',227,477],['SE',6066,15111],['TO',257,673]	]
+            }
+            
               var options = {
                     'width':"100%",
                     'height':"100%",
@@ -337,37 +252,142 @@
                     legend:{position: 'bottom', textStyle: { fontSize: 10}},
                     backgroundColor: "transparent",
                     // Cores para o grafico
-                    colors:['#FF8000','#01DF01',]
+                    colors:['blue','green','black']
               };
-              
               var chartPostos = new google.visualization.ColumnChart(document.getElementById('postos'));
-              var chartBares = new google.visualization.ColumnChart(document.getElementById('bares'));
-              var chartRestaurantes = new google.visualization.ColumnChart(document.getElementById('restaurantes'));
-              var chartLojas = new google.visualization.ColumnChart(document.getElementById('lojas'));
-              var chartPostos2 = new google.visualization.PieChart(document.getElementById('postos2'));
-              var chartBares2 = new google.visualization.PieChart(document.getElementById('bares2'));
-              var chartRestaurantes2 = new google.visualization.PieChart(document.getElementById('restaurantes2'));
-              var chartLojas2 = new google.visualization.PieChart(document.getElementById('lojas2'));
-              chartPostos.draw(dataPosto, options)
-              chartBares.draw(dataBares, options) 
-              chartRestaurantes.draw(dataRestaurantes, options)
-              chartLojas.draw(dataLojas, options)
-        
-              chartPostos2.draw(dataPosto, options)
-              chartBares2.draw(dataBares, options) 
-              chartRestaurantes2.draw(dataRestaurantes, options)
-              chartLojas2.draw(dataLojas, options)
+              chartPostos.draw(returnData(locais['postos']), options)
             }
-          function returnData(estabelecimento,locais,local){
+          function returnData(estados){
             var data = new google.visualization.DataTable();
-              data.addColumn('string', 'Cliente');
-              data.addColumn('number', 'Qtd');
-              data.addRows([
-                  ['Não Cliente', locais[estabelecimento][local][0]],
-                  ['Cliente', locais[estabelecimento][local][1]],
-             
-            ]);
+                data.addColumn('string', 'Estado');
+                data.addColumn('number', 'Cliente');
+                data.addColumn('number', 'Não Cliente');
+                data.addRows(estados);
           return data
           }
+
+        </script>
+         <script>
+                       
+            google.charts.load('current', {"callback" : criaGrafico,'packages':['corechart']});
+            function criaGrafico() {
+              locais2={
+                  bares: 
+                          [['AC',144,241],['AL',752,895],['AP',907,1002],['AM',104,181],['BA',4151,4300],['CE',2292,2383],
+['DF',452,521],['ES',1049,1091],['GO',2458,2532],['MA',2016,2128],['MT',7347,7421],['MS',974,997],
+['MG',1630,1738],['PA',1479,1612],['PB',1117,1179],['PR',2245,2243],['PE',1342,1383],['PI',1513,1612],
+['RJ',3468,3601],['RN',902,965],['RS',881,897],['RO',104,161],['RR',5231,5329],['SC',3457,3540],['SP',380,455],
+['SE',14965,15088],['TO',533,650]]
+            }
+            
+              var options2 = {
+                    'width':"100%",
+                    'height':"100%",
+                    pieHole: 0.2,
+                    animation:{
+                      duration: 5000,
+                      easing: 'linear',
+                    },
+                    fontSize:10,
+                    fontColor:"black",
+                    legend:{position: 'bottom', textStyle: { fontSize: 10}},
+                    backgroundColor: "transparent",
+                    // Cores para o grafico
+                    colors:['blue','green','black']
+              };
+              var chartBares= new google.visualization.ColumnChart(document.getElementById('bares'));
+              chartBares.draw(returnData(locais2['bares']), options2)
+            }
+          function returnData(estados){
+            var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Estado');
+                data.addColumn('number', 'Cliente');
+                data.addColumn('number', 'Não Cliente');
+                data.addRows(estados);
+          return data
+          }
+
+        </script>
+         <script>
+                       
+            google.charts.load('current', {"callback" : criaGrafico,'packages':['corechart']});
+            function criaGrafico() {
+              locais3={
+                  restaurantes: 
+                          [['AC',190,254],['AL',822,1279],['AP',945,1433],['AM',18,34],['BA',4231,6901],
+['CE',2222,3333],['DF',426,723],['ES',948,1664],['GO',2440,4322],['MA',2091,3351],
+['MT',7307,11630],['MS',851,1465],['MG',1607,2836],['PA',1490,2190],['PB',1058,1899],
+['PR',2156,3579],['PE',1303,2440],['PI',1506,2381],['RJ',3514,5597],['RN',881,1512],
+['RS',751,1196],['RO',84,140],['RR',5214,8744],['SC',3427,5125],['SP',358,654],['SE',15022,24399],['TO',566,851]]
+            }
+            
+              var options3 = {
+                    'width':"100%",
+                    'height':"100%",
+                    pieHole: 0.2,
+                    animation:{
+                      duration: 5000,
+                      easing: 'linear',
+                    },
+                    fontSize:10,
+                    fontColor:"black",
+                    legend:{position: 'bottom', textStyle: { fontSize: 10}},
+                    backgroundColor: "transparent",
+                    // Cores para o grafico
+                    colors:['blue','green','black']
+              };
+              var chartRestaurantes= new google.visualization.ColumnChart(document.getElementById('restaurantes'));
+              chartRestaurantes.draw(returnData(locais3['restaurantes']), options3)
+            }
+          function returnData(estados){
+            var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Estado');
+                data.addColumn('number', 'Cliente');
+                data.addColumn('number', 'Não Cliente');
+                data.addRows(estados);
+          return data
+          }
+
+        </script>
+         <script>
+                       
+            google.charts.load('current', {"callback" : criaGrafico,'packages':['corechart']});
+            function criaGrafico() {
+              locais02={
+                  lojas: 
+        [['AC',190,254],['AL',822,1279],['AP',945,1433],['AM',18,34],['BA',4231,6901],
+        ['CE',2222,3333],['DF',426,723],['ES',948,1664],['GO',2440,4322],['MA',2091,3351],
+        ['MT',7307,11630],['MS',851,1465],['MG',1607,2836],['PA',1490,2190],['PB',1058,1899],
+        ['PR',2156,3579],['PE',1303,2440],['PI',1506,2381],['RJ',3514,5597],['RN',881,1512],
+        ['RS',751,1196],['RO',84,140],['RR',5214,8744],['SC',3427,5125],['SP',358,654],['SE',15022,24399],['TO',566,851]]
+            }
+            
+              var options02 = {
+                    'width':"100%",
+                    'height':"100%",
+                    pieHole: 0.2,
+                    animation:{
+                      duration: 5000,
+                      easing: 'linear',
+                    },
+                    fontSize:10,
+                    fontColor:"black",
+                    legend:{position: 'bottom', textStyle: { fontSize: 10}},
+                    backgroundColor: "transparent",
+                    // Cores para o grafico
+                    colors:['blue','green','black']
+              };
+              var chartLojas= new google.visualization.ColumnChart(document.getElementById('lojas'));
+              chartLojas.draw(returnData(locais02['lojas']), options02)
+            }
+          function returnData(estados){
+            var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Estado');
+                data.addColumn('number', 'Cliente');
+                data.addColumn('number', 'Não Cliente');
+                data.addRows(estados);
+          return data
+          }
+
         </script>
 </html>

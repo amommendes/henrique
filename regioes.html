@@ -60,35 +60,61 @@
               <p>Regiões</p>
             </a>
           </li>
-          
+          <li class="nav-item   ">
+              <a class="nav-link" href="estados_all.html">
+    <i class="material-icons">person_add_disabled
+      </i>
+    <p>Clientes/Não clientes</p>
+  </a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="main-panel">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-left ">
-          <div class="container-fluid">          
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end">            
-            </div>
-          </div>  
-      </nav> 
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-          <div class="container-fluid">
-            <div class="navbar-wrapper">
-              <a class="navbar-brand" href="#">Dashboard</a>
-            </div>
-          </div>
-        </nav>
-      
-      <!-- End Navbar -->
-      <div class="content">
-        <div class="container-fluid">            
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-left ">
+            <div class="container-fluid">          
+             
+                <div class= "col-lg-12 col-md-4 col-sm-12">
+                    <div class="card">
+                   <div class="card-header card-header-tabs card-header-primary">
+                     <div class="nav-tabs-navigation">
+                       <div class="nav-tabs-wrapper">
+                         <span class="nav-tabs-title"></span>
+                         <ul class="nav nav-tabs" data-tabs="tabs">
+                          <li class="nav-item">
+                             <a class="nav-link" href="#settings" data-toggle="tab">
+                              <i class="material-icons " >important_devices</i> Gráfico por regiões
+                               <div class="ripple-container"></div>
+                             </a>
+                           </li>
+                         </ul>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                                              
+               </div> 
+              
+            </div>  
+        </nav> 
+  
+        
+                   <!-- your footer here -->                      
+     
+        
+        <!-- End Navbar -->
+        <div class="content">        
+          <div class="container-fluid">  
+                  <!-- your content here -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="navbar-toggler-icon icon-bar"></span>
+                      <span class="navbar-toggler-icon icon-bar"></span>
+                      <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end">            
+                    </div>         
             <div class="row"> 
                  <div class= "col-lg-6 col-md-4 col-sm-8">
                 <select id="dropdown">
@@ -113,12 +139,16 @@
                     <button class="btn"><i class="fa fa-feed"></i>  Feedback</button>             
         </div>
                                   
-            
+        <div class="col-sm-4">
+          <div class="card card-stats">
+              <div class="card-header card-header-success card-header-icon">
+                <p class="card-category">Popoulação</p>
+                <h3 class="card-title" id="populacao"></h3>
+              </div>
+            </div>
+      </div> 
           <div class="row">
-            <div class="col-md-12">
-                <div class="card-body">
-                    <h4 class="card-title">População 2 milhões</h4>
-                  </div>
+            <div class="col-md-12">               
               <div class="card card-chart">
                 <div class="card-header ">
                         <div class="row">
@@ -260,7 +290,10 @@
           
 
         }
-      local = $("#dropdown").val()
+
+     population = {SUL:'27.384.815 milhões',SULDESTE:'80.353.724 milhões',NORTE:'24.865.678 milhões',CENTRO:'14.050.340 milhões',NORDESTE:'53.078.137 milhões',}
+     local = $("#dropdown").val()
+      $("#populacao").text(population[local])
       dataPosto =returnData("postos",locais,local)
       dataBares =returnData("bares",locais,local)
       dataLojas =returnData("lojas",locais,local)

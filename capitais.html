@@ -60,67 +60,94 @@
               <p>Regiões</p>
             </a>
           </li>
-         
+          <li class="nav-item   ">
+              <a class="nav-link" href="estados_all.html">
+    <i class="material-icons">person_add_disabled
+      </i>
+    <p>Clientes/Não clientes</p>
+  </a>
+          </li>
+          
         </ul>
       </div>
     </div>
     <div class="main-panel">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-left ">
-          <div class="container-fluid">          
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-              <span class="navbar-toggler-icon icon-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end">            
-            </div>
-          </div>  
-      </nav> 
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-          <div class="container-fluid">
-            <div class="navbar-wrapper">
-              <a class="navbar-brand" href="#">Dashboard</a>
-            </div>
-          </div>
-        </nav>
-      
-      <!-- End Navbar -->
-      <div class="content">
-        <div class="container-fluid">            
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-left ">
+            <div class="container-fluid">          
+             
+                <div class= "col-lg-12 col-md-4 col-sm-12">
+                    <div class="card">
+                   <div class="card-header card-header-tabs card-header-primary">
+                     <div class="nav-tabs-navigation">
+                       <div class="nav-tabs-wrapper">
+                         <span class="nav-tabs-title"></span>
+                         <ul class="nav nav-tabs" data-tabs="tabs">
+                          <li class="nav-item">
+                             <a class="nav-link" href="#settings" data-toggle="tab">
+                              <i class="material-icons " >important_devices</i> Gráfico por Capitais
+                               <div class="ripple-container"></div>
+                             </a>
+                           </li>
+                         </ul>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                                              
+               </div> 
+              
+            </div>  
+        </nav> 
+  
+        
+                   <!-- your footer here -->                      
+     
+        
+        <!-- End Navbar -->
+        <div class="content">        
+          <div class="container-fluid">  
+                  <!-- your content here -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="navbar-toggler-icon icon-bar"></span>
+                      <span class="navbar-toggler-icon icon-bar"></span>
+                      <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end">            
+                    </div>        
             <div class="row"> 
                  <div class= "col-lg-6 col-md-4 col-sm-8">
                 <select id="dropdown">
                   <optgroup label="">
                       <option value="NULL">Selecione</option>
-                      <option value="AC">Acre</option>
-                      <option value="AL">Alagoas</option>
-                      <option value="AP">Amapá</option>
-                      <option value="AM">Amazonas</option>
-                      <option value="BA">Bahia</option>
-                      <option value="CE">Ceará</option>
-                      <option value="DF">Distrito Federal</option>
-                      <option value="ES">Espírito Santo</option>
-                      <option value="GO">Goiás</option>
-                      <option value="MA">Maranhão</option>
-                      <option value="MT">Mato Grosso</option>
-                      <option value="MS">Mato Grosso do Sul</option>
-                      <option value="MG">Minas Gerais</option>
-                      <option value="PA">Pará</option>
-                      <option value="PB">Paraíba</option>
-                      <option value="PR">Paraná</option>
-                      <option value="PE">Pernambuco</option>
-                      <option value="PI">Piauí</option>
-                      <option value="RJ">Rio de Janeiro</option>
-                      <option value="RN">Rio Grande do Norte</option>
-                      <option value="RS">Rio Grande do Sul</option>
-                      <option value="RN">Rondônia</option>
-                      <option value="RO">Roraima</option>
-                      <option value="SC">Santa Catarina</option>
-                      <option value="SP">São Paulo</option>
-                      <option value="SE">Sergipe</option>
-                      <option value="TO">Tocantins</option>
+                      <option value='AC'>AC-Rio Branco</option>
+<option value='AL'>AL-Maceió</option>
+<option value='AP'>AP-Macapá</option>
+<option value='AM'>AM-Manaus</option>
+<option value='BA'>BA-Salvador</option>
+<option value='CE'>CE-Fortaleza</option>
+<option value='DF'>DF-Brasília</option>
+<option value='ES'>ES-Vitória</option>
+<option value='GO'>GO-Goiânia</option>
+<option value='MA'>MA-São Luís</option>
+<option value='MT'>MT-Cuiabá</option>
+<option value='MS'>MS-Campo Grande</option>
+<option value='MG'>MG-Belo Horizonte</option>
+<option value='PA'>PA-Belém</option>
+<option value='PB'>PB-João Pessoa</option>
+<option value='PR'>PR-Curitiba</option>
+<option value='PE'>PE-Recife</option>
+<option value='PI'>PI-Teresina</option>
+<option value='RJ'>RJ-Rio de Janeiro</option>
+<option value='RN'>RN-Natal</option>
+<option value='RS'>RS-Porto Alegre</option>
+<option value='RO'>RO-Porto Velho</option>
+<option value='RR'>RR-Boa Vista</option>
+<option value='SC'>SC-Florianópolis</option>
+<option value='SP'>SP-São Paulo</option>
+<option value='SE'>SE-Aracaju</option>
+<option value='TO'>TO-Palmas</option>
                   </optgroup>
                 </select>
               </div>
@@ -135,7 +162,14 @@
                     <button class="btn"><i class="fa fa-feed"></i>  Feedback</button>             
         </div>
                                   
-            
+        <div class="col-sm-4">
+          <div class="card card-stats">
+              <div class="card-header card-header-success card-header-icon">
+                <p class="card-category">Popoulação</p>
+                <h3 class="card-title" id="populacao"></h3>
+              </div>
+            </div>
+      </div> 
           <div class="row">
             <div class="col-md-12">
               <div class="card card-chart">
@@ -272,15 +306,18 @@
     google.charts.load('current', {"callback" : criaGrafico,'packages':['corechart']});
     function criaGrafico() {
       locais={
-          postos:{NULL:[],AC:[15,16,13],AL:[15,16,14],AP:[25,333],AM:[15,16],BA:[15,16],CE:[15,16],DF:[15,16],ES:[15,16],GO:[15,16],MA:[15,16],MT:[15,16],MS:[15,16],MG:[15,16],PA:[15,16],PB:[15,16],PR:[15,16],PE:[15,16],PI:[15,16],RJ:[15,16],RN:[15,16],RS:[15,16],RN:[15,16],RO:[15,16],SC:[15,16],SP:[15,16],SE:[15,16],TO:[15,16]},
-          restaurante:{NULL:[],AC:[556,3325,0],AL:[],AP:[],AM:[],BA:[10,1],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-          bares:{NULL:[],AC:[1236,125.23,0],AL:[],AP:[],AM:[],BA:[8,9],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-          lojas:{NULL:[],AC:[3215,9875,3000],AL:[],AP:[],AM:[],BA:[3,3],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-          lojas:{NULL:[],AC:[3215,9875,3000],AL:[],AP:[],AM:[],BA:[3,3],CE:[],DF:[],ES:[],GO:[],MA:[],MT:[],MS:[],MG:[],PA:[],PB:[],PR:[],PE:[],PI:[],RJ:[],RN:[],RS:[],RN:[],RO:[],SC:[],SP:[],SE:[],TO:[],},
-
+          postos:{NULL:[],AC:[62,73],AL:[162,208],AP:[75,180],AM:[48,78],BA:[802,971],CE:[225,293],DF:[124,169],ES:[290,410],GO:[728,986],MA:[214,483],MT:[1009,1387],MS:[300,369],MG:[377,624],PA:[112,180],PB:[286,465],PR:[390,591],PE:[594,703],PI:[282,330],RJ:[431,733],RN:[261,355],RS:[172,239],RO:[56,73],RR:[1253,1499],SC:[256,354],SE:[169,203],SP:[2498,3287],TO:[89,157],}, 
+     restaurante:{NULL:[],AC:[126,106],AL:[364,510],AP:[456,526],AM:[1,86],BA:[1561,2675],CE:[1110,1208],DF:[129,317],ES:[232,793],GO:[558,1962],MA:[831,1293],MT:[2984,4376],MS:[236,713],MG:[377,1273],PA:[789,777],PB:[217,884],PR:[734,1448],PE:[166,1206],PI:[632,927],RJ:[1430,2149],RN:[249,686],RS:[305,542],RO:[27,73],RR:[1684,3627],SC:[1729,1745],SE:[62,324],SP:[5645,9433],TO:[281,358],},
+           bares:{NULL:[],AC:[70,107],AL:[413,511],AP:[449,527],AM:[17,87],BA:[2578,2676],CE:[1193,1209],DF:[262,318],ES:[787,794],GO:[1903,1963],MA:[1220,1294],MT:[4296,4377],MS:[710,714],MG:[1196,1274],PA:[680,778],PB:[838,885],PR:[1448,1449],PE:[1203,1207],PI:[885,928],RJ:[2069,2150],RN:[648,687],RS:[537,543],RO:[57,74],RR:[3593,3628],SC:[1693,1746],SE:[268,324],SP:[9388,9434],TO:[275,359],},
+           lojas:{NULL:[],AC:[126,85],AL:[364,573],AP:[456,564],AM:[1,51],BA:[1561,3095],CE:[1110,1472],DF:[129,352],ES:[232,933],GO:[558,2245],MA:[831,1533],MT:[2984,5055],MS:[236,777],MG:[377,1423],PA:[789,943],PB:[217,1012],PR:[734,1625],PE:[166,1342],PI:[632,1026],RJ:[1430,2446],RN:[249,755],RS:[305,571],RO:[27,30],RR:[1684,4144],SC:[1729,2112],SE:[62,307],SP:[5645,10958],TO:[281,440],},
 
         }
-      local = $("#dropdown").val()
+        population = {AC:'401.155.mil',AL:'1.012.382.milhões',AP:'493.634.mil',AM:'2.145.444.milhões',BA:'2857.329.milhões',CE:'2643.247.milhões',DF:'2.974.703.milhões',ES:'358.267.milhões',GO:'1.495.705.milhões',MA:'1.094.667.milhões',MT:'607.153.mil',MS:'885.711.mil',MG:'2.501.576.milhões',PA:'1.917.185.milhões',PB:'800.323.mil',PR:'1.485.732.milhões',PE:'1.637.834.milhões',PI:'861.442.mil',RJ:'6.688.927.milhões',RN:'877.640.mil',RS:'1.479.101.milhões',RO:'519.536.mil',RR:'375.374.mil',SC:'492.977.mil',SE:'12.176.866.milhões',SP:'648.939.mil',TO:'291.855.mil'}
+
+
+
+     local = $("#dropdown").val()
+      $("#populacao").text(population[local])
       dataPosto =returnData("postos",locais,local)
       dataBares =returnData("bares",locais,local)
       dataLojas =returnData("lojas",locais,local)
@@ -328,16 +365,10 @@
   function returnData(estabelecimento,locais,local){
     var data = new google.visualization.DataTable();
       data.addColumn('string', 'Cliente');
-      
       data.addColumn('number', 'Qtd');
-
-  
-
       data.addRows([
           ['Cliente', locais[estabelecimento][local][0]],
           ['Não Cliente', locais[estabelecimento][local][1]],
-          ['Não ', locais[estabelecimento][local][2]]
-
     ]);
   return data
   }
